@@ -5,25 +5,42 @@
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <meta http-equiv="X-UA-Compatible" content="ie=edge">
          <link rel="stylesheet" href="style.css">
-         <link rel=""
-         <title>Formulario</title>
      </head>
      <body>
          <div class="mother">
              <div class="formdiv">
                 <div class="form">
-                    <input type="text" placeholder="Nombres" name="fname" id="fname" class="fields">
-                    <input type="text" placeholder="Apellidos" name="lname" id="lname" class="fields">
-                    <input type="number" placeholder="Peso en LB" name="weight" id="weight" class="fields">
-                    <input type="text" placeholder="Fecha de Nacimiento" name="dob" id="dob" class="fields" onfocus="(this.type='date')">
-                    <button type="submit" onclick="registrar()" class="botton">Registrar Información</button>
+                    <section>
+                        <h3>First Name</h3>
+                        <input type="text" name="firstName" id="firstName" class="fields">
+                    </section>
+                    <section>
+                        <h3>Last Name</h3>
+                        <input type="text" name="lastName" id="lastName" class="fields">
+                    </section>
+                    <section>
+                        <h3>Weight (LB)</h3>
+                        <input type="number" name="weight" id="weight" class="fields">
+                    </section>
+                    <section>
+                        <h3>Date of Birth</h3>
+                        <input type="text" name="dateOfBirth" id="dateOfBirth" class="fields" onfocus="(this.type='date')">
+                    </section>
+                    <section class="bottonSection">
+                        <button type="submit" onclick="register()" class="botton">Register</button>
+                        <button type="submit" onclick="clearList()" class="botton">Clear Data</button>
+                    </section> 
                 </div>
              </div>
              <div class="tablediv">
                  <div class="table">
-                    <table >
-                        <tr><th> Nombre </th><th> Apellido </th><th> Peso </th><th> F.Nacimiento </th></tr>
-                        <tr id="tablaPersonas"></tr>
+                    <table id="peopleTable">
+                        <tr class="tableHeaders">
+                            <th> First Name </th>
+                            <th> Last Name </th>
+                            <th> Weight (LB) </th>
+                            <th> Date of Birth </th>
+                        </tr>
                     </table>
                  </div>
                  
